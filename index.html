@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Web Advance Assignment</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="CSS/Style.css">   
+
+     
+    </head>
+
+    <body>
+     
+        <audio src="mp3\birds.mp3" id="birds" loop="loop"></audio>
+        <audio src="mp3\Noisey.mp3" id="noisey" loop="loop"></audio>
+        <audio src="mp3\rain.mp3" id="rain" loop="loop" ></audio>
+        <audio src="mp3\badresult.mp3" id="badresult" ></audio>
+        <audio src="mp3\Applause.wav" id="applause"  ></audio>
+
+        <header>
+            <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:rgb(235, 235, 235)">
+            <a class="navbar-brand" href="#"><h3 class="text-left">Assignment Web Advance</h3></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-lg-auto">
+
+            <li class="nav-item">
+            <a class="nav-link mt-2 text-left" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item" >
+            <a class="nav-link mt-2 text-left" href="showAll.html">Show All</a>
+            </li>
+
+            </ul>
+            </div>
+            </nav>
+            </div>
+        </header>
+        <br>
+
+
+        <div id="content" >
+            <div class="row">
+            <div class="col-sm-6">
+                <h4 class="text-left">Student Name</h4>
+                <div class="input-group mb-6">
+                    <input type="text" class="form-control"  id="name" onfocus="inputFocus()" onblur="inputBlur()" onkeyup="nameChange()">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"  style="color: red;display: none; " id="nameStarError">*</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+            </div>
+            <div class="col-sm-12">
+                <p id="nameError" class="text-left" style="color: red; font-size: 20px;display: none;">Error: The name must contain only letters and spaces</p>
+            </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="row">
+            <div class="col-sm-3">
+                <h4 class="text-left">First Exam</h4>
+                <div class="input-group mb-6">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"  style="color: red;display: none; " id="firstStarError">*</span>
+                    </div>
+                    <input type="number" class="form-control"  id="fi" onfocus="inputFocus()" onblur="inputBlur()" onkeyup="firstChange()">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">/ 20</span>
+                    </div>
+                    <p id="FirstError" class="text-left" style="color: red; font-size: 20px;display: none;">Error: You must enter a mark between 0-20</p>
+                </div>            
+            </div>
+            <div class="col-sm-3">
+                <h4 class="text-left">Second Exam</h4>
+                <div class="input-group mb-6">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"  style="color: red;display: none; " id="secondStarError">*</span>
+                    </div>
+                    <input type="number" class="form-control"  id="se" onfocus="inputFocus()" onblur="inputBlur()" onkeyup="secondChange()" >
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" >/ 20</span>
+                    </div>
+                    <p id="secondError" class="text-left" style="color: red; font-size: 20px;display: none;">Error: You must enter a mark between 0-20</p>
+
+                </div>           
+            </div>
+            <div class="col-sm-3">
+                <h4 class="text-left">Final Exam</h4>
+                <div class="input-group mb-6">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"  style="color: red;display: none; " id="finalStarError">*</span>
+                    </div>
+                    <input type="number" class="form-control"  id="fn" onfocus="inputFocus()" onblur="inputBlur()" onkeyup="finalChange()">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" >/ 50</span>
+                    </div>
+                    <p id="finalError" class="text-left" style="color: red; font-size: 20px;display: none;">Error: You must enter a mark between 0-50</p>
+
+                </div>            
+            </div>
+            <div class="col-sm-3">
+                <h4 class="text-left">Participation</h4>
+                <div class="input-group mb-6">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"  style="color: red;display: none; " id="participationStarError">*</span>
+                    </div>
+                    <input type="number" class="form-control"  id="p" onfocus="inputFocus()" onblur="inputBlur()" onkeyup="participationChange()">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" >/ 10</span>
+                    </div>
+                    <p id="participationError" class="text-left" style="color: red; font-size: 20px;display: none;">Error: You must enter a mark between 0-10</p>
+
+                </div>            
+            </div>
+            </div>
+            <br>
+            <br>
+    
+            <div class="row">
+                <div class="col-sm-6">
+                    <fieldset class="scheduler-border">
+                        <legend class="scheduler-border">Absence</legend>
+                        <div class="control-group">
+                            <div class="radio">
+                                <label style="color: antiquewhite;"><input  type="radio" name="r" value="1">  < 7 times</label>
+                              </div>
+                              <div class="radio">
+                                <label style="color: antiquewhite;"><input  type="radio" name="r"  value="2">  >= 7 times</label>
+                              </div>
+                        </div>
+                        <p id="absenceError" class="text-left" style="color: red; font-size: 20px;display: none;">Error: This option is required</p>
+
+                    </fieldset>
+                </div>
+                <div class="col-sm-6">
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="text-center">
+                         <button  class="btn btn-success" onclick="compute()">Compute</button>
+                    </div>
+                </div>
+         
+                <div class="col-sm-6">
+                    <input type="text" class="form-control"  id="reslt" readonly>
+
+                </div>
+
+               
+                <div class="col-sm-3">
+                    <div class="text-center">
+                        <a href="showAll.html"><button class="btn btn-primary">Show All</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-center">
+                        <p id="needEffort" class="text-center" style="color: red; font-size: 20px;display: none;">You need more effort</p>
+                    </div>
+                </div>
+         
+                <div class="col-sm-12">
+                    <div class="text-center">
+                        <p id="greatEffort" class="text-center" style="color: red; font-size: 20px;display: none;">Great Effort</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="text-center">
+                        <p id="allField" class="text-center" style="color: red; font-size: 20px;display: none;">All fields are required</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+         <!-- Footer -->
+         <footer style="background-color:rgb(235, 235, 235);">
+         <!-- Copyright -->
+            <div class="footer-copyright">© 2020 Abdallah Nasief & Ibraheem AL-Jabari </div>
+        </footer>
+        <!-- Footer -->
+
+
+        <!--JS File-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <!--JS File-->
+        <script src="scripts\indexScript.js"></script>
+    </body>
+
+
+
+</html>

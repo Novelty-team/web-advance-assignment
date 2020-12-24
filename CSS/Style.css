@@ -1,0 +1,176 @@
+header
+{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+button{
+    align-items: center;
+}
+#content
+{
+    background-color: #607D8B;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Amiri', serif;
+    min-height: 100vh;
+    padding:15% 5% 5%;
+}
+td
+{
+    color: rgb(235, 235, 235);
+}
+h2
+{
+    font-size: 35px;
+    text-transform: uppercase;
+    color: rgb(235, 235, 235);
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+h4 
+{
+    font-size: 25px;
+    line-height: 1.375em;
+    color: rgb(235, 235, 235);
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-align: right;
+}
+p
+{
+    font-size: 20px;
+    line-height: 2em;
+    color: rgb(235, 235, 235);
+    margin-bottom: 15px;
+    text-align: right;
+}
+.sticker2
+{
+   width: 50%;
+   margin-right : 50%;
+   animation: 1s infinite beatHeart;
+  
+}
+fieldset.scheduler-border
+ {
+    border: 2px groove rgb(255, 255, 255) !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+  
+}
+
+legend.scheduler-border {
+        width:inherit; 
+        padding:0 10px; 
+        border-bottom:none;
+        color: antiquewhite;
+}
+
+
+.container
+{
+    padding: 0;
+    margin: 0;
+}
+.navbar-brand
+{
+   
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px #AFA7A7;
+    color: #607D8B !important;
+    font-family: 'Amiri', serif;
+    margin-left: 2rem;
+}
+.navbar-light .navbar-nav .nav-item .nav-link
+{
+   
+    font-size: 30px ;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px #AFA7A7;
+    color: #607D8B !important;
+    font-family: 'Amiri', serif;
+    margin-left: 2rem;
+}
+.navbar-light .navbar-nav .nav-item .nav-link:hover
+{
+   opacity: 0.8;
+}
+.navbar-collapse
+{
+    background: rgb(235, 235, 235); 
+}
+#desto
+{
+    width: 200px;
+}
+#eng
+{
+    width: 50px;
+}
+footer
+{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.footer-copyright
+{
+    font-size: 30px ;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px #AFA7A7;
+    color: #607D8B !important;
+    font-family: 'Amiri', serif;
+    text-align: center;
+}
+
+@media (max-width:900px)
+{
+.navbar-brand
+{
+    margin-right: 0rem;
+}
+.navbar-light .navbar-nav .nav-item .nav-link
+{
+   font-size: 20px ;
+   text-align: right;
+}	
+.navbar-brand
+{
+    width:10px;   
+}
+#desto
+{
+    width: 150px;
+}
+#eng
+{
+    width: 40px;
+}
+.footer-copyright
+{
+    font-size: 20px ;
+} 
+}
+
+/* sm */
+@media (max-width: 760px)
+{ 
+#about
+{
+    padding: 26% 5% 5%;
+}
+.sticker2
+{
+   width: 70%;
+   margin-right : 30%;
+   animation: 1s infinite beatHeart;
+  
+}    
+}
